@@ -336,7 +336,7 @@ export default function DownloadPage() {
       console.log('File ID:', fileId);
 
       // Fetch from OUR backend (not Backblaze directly)
-      const response = await fetch('https://guardianbox-backend-id9z.onrender.comfile/${fileId}');
+      const response = await fetch(`https://guardianbox-backend-id9z.onrender.com/file/${fileId}`);
       console.log('Response status:', response.status);
 
       if (!response.ok) {
