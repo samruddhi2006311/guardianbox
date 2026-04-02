@@ -428,7 +428,7 @@ export default function UploadPage() {
       formData.append('expiryHours', expiryHours);
       formData.append('downloadLimit', downloadLimit);
 
-      const response = await fetch('http://localhost:5000/upload', { method: 'POST', body: formData });
+      const response = await fetch('https://guardianbox-backend-id9z.onrender.com/upload', { method: 'POST', body: formData });
       const data = await response.json();
       setShareableLink(`${window.location.origin}/file/${data.fileId}#${keyString}`);
     } catch (e) {
