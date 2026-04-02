@@ -13,6 +13,7 @@ app.use(express.json());
 
 app.use('/', fileRoutes);
 
-app.listen(5000, () => {
-  console.log('GuardianBox server running on http://localhost:5000');
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`GuardianBox server running on port ${PORT}`);
 });
